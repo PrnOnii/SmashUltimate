@@ -34,33 +34,33 @@
 
 			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 				<ul class="navbar-nav">
-					<li class="nav-item">
+					<li class="nav-item {{ Request::is('/') ? 'active' : ''}}">
 						<a class="nav-link" href="{{ route('home') }}">
 							<i class="fas fa-home"></i> Acceuil
 						</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {{ Request::is('planning') ? 'active' : ''}}">
 						<a class="nav-link" href="{{ route('planning') }}">
 							<i class="fas fa-calendar-alt"></i> Planning
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
+					<li class="nav-item {{ Request::is('VODs') ? 'active' : ''}}">
+						<a class="nav-link" href="{{ route('VOD') }}">
 							<i class="fas fa-video"></i> VODs
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
+					<li class="nav-item {{ Request::is('ranking') ? 'active' : ''}}">
+						<a class="nav-link" href="{{ route('ranking') }}">
 							<i class="fas fa-trophy"></i> Ranking
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
+					<li class="nav-item {{ Request::is('worldmap') ? 'active' : ''}}">
+						<a class="nav-link" href="{{ route('worldmap') }}">
 							<i class="fas fa-globe"></i> Mappemonde
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
+					<li class="nav-item {{ Request::is('contact') ? 'active' : ''}}">
+						<a class="nav-link" href="{{ route('contact') }}">
 							<i class="far fa-user"></i> Contacts
 						</a>
 					</li>
