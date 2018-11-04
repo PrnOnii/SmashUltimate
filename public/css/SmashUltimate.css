@@ -1,0 +1,11 @@
+.navbar {
+	margin-top: 300px;
+	z-index: 1;
+}
+
+body {
+	background-image: url("../img/SSBU_banner.png");
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	background-size: 100%;
+}

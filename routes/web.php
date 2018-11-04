@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/planning', 'PlanningController@index')->name('planning');
+Route::get('/VODs', 'VODController@index')->name('VOD');
+Route::get('/ranking', 'RankingController@index')->name('ranking');
+Route::get('/worldmap', 'VODController@index')->name('worldmap');
+Route::get('/contact', 'VODController@index')->name('contact');
