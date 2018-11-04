@@ -22,6 +22,7 @@
 </head>
 <body>
 <div id="app">
+	<img src="{{ asset('img/SSBU_banner.png')}}" class="SSBUbanner image-fluid">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container">
 			<a class="navbar-brand" href="#">
@@ -106,6 +107,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/sl-1.2.6/datatables.min.js"></script>
 <script type="text/javascript"  src="{{ asset('js/chosen.jquery.min.js') }}"></script>
 <script src="{{ asset('js/moment.js') }}"></script>
+<script src="{{ asset('js/SmashUltimate.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script>
 		$(".chosen").chosen();
