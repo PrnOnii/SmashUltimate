@@ -1,11 +1,16 @@
 .navbar {
-	margin-top: 300px;
 	z-index: 1;
+}
+@media screen and (max-width: 1200px) {
+	.SSBUbanner {
+		width: 1200px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.SSBUbanner {
+		width: 100%;
+	}
 }
 
 body {
-	background-image: url("../img/SSBU_banner.png");
-	background-repeat: no-repeat;
-	/*background-attachment: fixed;*/
-	background-size: 100%;
 }
