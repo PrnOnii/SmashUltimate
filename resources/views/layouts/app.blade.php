@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ config('app.locale') }}">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,13 +18,15 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/tooltip-themes/shadow.css') }}" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/sl-1.2.6/datatables.min.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel='stylesheet' href='{{ asset('fullcalendar/fullcalendar.css') }}'>
+	@yield('styles')
 
 </head>
 <body>
 <div id="app">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{ route('home') }}">
 				{{ config('app.name', 'Smash Ultimate FR') }}
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -110,6 +112,9 @@
 <script>
 		$(".chosen").chosen();
 </script>
+<script src='{{ asset("fullcalendar/fullcalendar.js") }}'></script>
+<script src="{{ asset('fullcalendar/gcal.js') }}"></script>
+<script src="{{ asset('fullcalendar/locale-all.js') }}"></script>
 @yield('scripts')
 </body>
 </html>
