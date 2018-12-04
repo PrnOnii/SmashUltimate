@@ -5,7 +5,7 @@ return [
 	"role" => [
 		"bastien"		=> "Instigateur du projet SmashUltimate.fr",
 		"kevan"			=> "Développeur web",
-		"jean"			=> "Infographiste / Web designer",
+		"jean"			=> "Infographiste | Web designer",
 		"remi"			=> "Responsable du planning des tournois",
 		"licia"			=> "Chargée de communication | Réseaux Sociaux",
 		"arnaud"		=> "Chargé de communication | VODs"

@@ -180,7 +180,6 @@
 ="https://unpkg.com/sweetalert2@7.24.1/dist/sweetalert2.all.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/sl-1.2.6/datatables.min.js"></script>
 <script src="{{ asset('js/moment.js') }}"></script>
-<script src="{{ asset('js/SmashUltimate.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script>
 		// $(".chosen").chosen();
