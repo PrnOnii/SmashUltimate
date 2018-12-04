@@ -20,15 +20,33 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-6 col-sm-12 border rounded">
-		<h3 class="text-center">{{ trans("home.twitter") }}</h3>
-		<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
-		<h3 class="text-center">{{ trans("home.construction") }}</h3>
+	<div class="col-lg-6 col-sm-12 border rounded p-3">
+		<div class="container">
+			<div class="row">
+				<h3 class="mx-auto">
+					<a href="http://twitter.com/SmashUltimateFr">
+						<i class="fab fa-twitter"></i> {{ trans("home.twitter") }}
+					</a>
+				</h3>
+		</div>
+			<div class="row">
+				<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
+			</div>
+			<div class="row">
+				<h3 class="mx-auto mt-3">{{ trans("home.construction") }}</h3>
+			</div>
+		</div>
 	</div>
-	<div class="col-lg-3 col-sm-12 border rounded">
-		<h3 class="text-center">{{ trans("home.twitch") }}</h3>
-		<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
-		<h3 class="text-center">{{ trans("home.construction") }}</h3>
+	<div class="col-lg-3 col-sm-12 border rounded p-3">
+		<div class="row">
+			<h3 class="mx-auto">{{ trans("home.twitch") }}</h3>
+		</div>
+		<div class="row">
+			<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
+		</div>
+		<div class="row">
+			<h3 class="mx-auto mt-3">{{ trans("home.construction") }}</h3>
+		</div>
 	</div>
 </div>
 @endsection
@@ -60,7 +78,14 @@
 			height: 'auto',
 			eventClick: function(event, jsEvent, view) {
 				return false;
-			}
+			},
+			eventRender: function(event, element, view) {
+				var eventEnd = moment(event.end);
+				var NOW = moment();
+				if (eventEnd.diff(NOW, 'seconds') <= 0) {
+					return false;
+				}
+			},
 	});
 
 	function decodeHtmlSpecialCHars(text = "") {

@@ -3,7 +3,7 @@
 return [
 	"title"				=> "The Crew",
 	"role" => [
-		"bastien" 		=> "Instigator of the Smashultimate.fr project",
+		"bastien" 		=> "Instigator of the SmashUltimate.fr project",
 		"kevan"			=> "Web Developer",
 		"jean"			=> "Web Designer",
 		"remi"			=> "Calendar Manager",
