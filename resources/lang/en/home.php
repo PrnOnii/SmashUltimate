@@ -7,5 +7,6 @@ return [
 	],
 	"calendar"			=> "Quick Calendar",
 	"twitter"			=> "Twitter",
-	"twitch"			=> "Twitch live"
+	"twitch"			=> "Twitch live",
+	"construction"		=> "Under construction!"
 ];

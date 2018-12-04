@@ -6,25 +6,29 @@
 
 @section("content")
 <div class="row my-4">
-	<div class="col-3 hidden-xs border rounded p-3">
+	<div class="col-lg-3 border rounded p-3">
 		<div class="container">
 			<div class="row">
-				<h3 class="text-center">
+				<h3 class="mx-auto">
 					<a href="{{ route('planning') }}" class="btn-link">
 						<i class="fas fa-calendar-alt"></i> {{ trans("home.calendar") }}
 					</a>
 				</h3>
 			</div>
 			<div class="row">
-				<div id="calendar"></div>
+				<div id="calendar" class="mx-auto"></div>
 			</div>
 		</div>
 	</div>
-	<div class="col-6 col-xs-12 border rounded">
-		<h3>{{ trans("home.twitter") }}</h3>
+	<div class="col-lg-6 col-sm-12 border rounded">
+		<h3 class="text-center">{{ trans("home.twitter") }}</h3>
+		<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
+		<h3 class="text-center">{{ trans("home.construction") }}</h3>
 	</div>
-	<div class="col-3 hidden-xs border rounded">
-		<h3>{{ trans("home.twitch") }}</h3>
+	<div class="col-lg-3 col-sm-12 border rounded">
+		<h3 class="text-center">{{ trans("home.twitch") }}</h3>
+		<img src="{{ asset("img/construction.png") }}" class="mx-auto d-block mt-5" alt="Under Construction">
+		<h3 class="text-center">{{ trans("home.construction") }}</h3>
 	</div>
 </div>
 @endsection
