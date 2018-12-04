@@ -17,3 +17,5 @@ Route::get('/VODs', 'VODController@index')->name('VOD');
 Route::get('/ranking', 'RankingController@index')->name('ranking');
 Route::get('/worldmap', 'WorldmapController@index')->name('worldmap');
 Route::get('/contact', 'ContactController@index')->name('contact');
+
+Route::get("/lang/{lang}", "HomeController@language");
