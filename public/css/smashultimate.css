@@ -1,0 +1,145 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+	padding-top: 0 !important;
+}
+
+@media (min-width: 992px) {
+	body {
+		padding-top: 56px;
+	}
+}
+
+h2{
+	padding-bottom:0.5em !important;
+}
+
+/* Logo */
+.logo{
+	height: 3em;
+	width: 26em;
+	background: url("../img/Logo_blanc_long.png") no-repeat;
+	background-size:contain;
+	display: inline-block;
+}
+.logo:hover{
+	background: url("../img/Logo_couleur_long.png") no-repeat;
+	background-size:contain;
+}
+
+/* Menu */
+.navbar {
+	background-color:#000c !important;
+}
+.nav-link{
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color:#989898 !important;
+}
+.nav-link:hover{
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: #ffffff !important;
+}
+.navspace{
+	padding-top:100px;
+}
+.navbar-nav {
+	clear: none;
+}
+.navbar-nav > li > .dropdown-menu {
+	background-color: #000c;
+}
+.navbar-nav > li > .dropdown-menu > .dropdown-item {
+	color: #989898;
+}
+.navbar-nav > li > .dropdown-menu > .dropdown-item:hover {
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: #ffffff !important;
+	background-color: #000c;
+}
+
+
+
+#banner {
+	background-image: url("../img/background.jpg") !important;
+	height: 20em;
+	padding: 8em 0em 8em;
+	background-attachment:fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	color: #ffffff;
+	text-align: center;
+}
+
+.carousel-item {
+	height: 45vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.portfolio-item {
+	margin-bottom: 30px;
+}
+
+.singe{
+	padding-top:1em;
+}
+
+
+/* Footer */
+#footer {
+	background: #202222;
+	color: #888;
+	padding: 0.5em 0em 0.5em;
+}
+#footer a {
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: #888;
+}
+#footer a:active, #footer a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+#footer .icons .rounded:active, #footer .icons .rounded:hover {
+	border-color: #ffffff;
+}
+#footer .copyright {
+	font-size: 0.7em;
+	padding: 0;
+	text-align: center;
+}
+#footer .copyright li {
+	border-left: solid 1px rgba(144, 144, 144, 0.25);
+	display: inline-block;
+	list-style: none;
+	margin-left: 1.5em;
+	padding-left: 1.5em;
+}
+#footer .copyright li:first-child {
+	border-left: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
