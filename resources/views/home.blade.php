@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section('title')
-	Smash Ultimate FR
+	{{ trans('home.title') }}
 @endsection
 
 @section("content")

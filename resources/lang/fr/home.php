@@ -1,6 +1,7 @@
 <?php
 
 return [
+	"title"				=> "Le site de la communauté compétitive française",
 	"banner" => [
 		"title"			=> "Bienvenue sur SmashUltimate.fr",
 		"description"	=> "Le point de rencontre de la communauté compétitive française de Super Smash bros Ultimate."

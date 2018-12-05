@@ -10,7 +10,7 @@
 	<meta name="keywords" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>{{ config('app.name', 'Smash Ultimate FR') }} | {{ trans('layout.meta.title') }}</title>
+	<title>@yield('title') | {{ config('app.name', 'Smash Ultimate FR') }}</title>
 
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
