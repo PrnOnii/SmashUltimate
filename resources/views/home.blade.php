@@ -5,7 +5,7 @@
 @endsection
 
 @section("content")
-	<div class="row my-4">
+	<div class="row mt-4 mb-5">
 		<div class="col-lg-3 border rounded p-3">
 			<div class="container">
 				<div class="row">
@@ -29,7 +29,7 @@
 						</a>
 					</h3>
 				</div>
-				<div class="row">
+				<div class="row scrollable">
 
 					@foreach($tweets as $tweet)
 						<div class="mx-auto">

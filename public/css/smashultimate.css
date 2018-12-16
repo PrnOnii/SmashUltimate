@@ -3,13 +3,42 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
+
+
+/* --------------------Font-------------------- */
+
+
+@font-face {
+	font-family: "Neusa";
+	font-weight: 100;
+	src:url("../fonts/NeusaNextPro.otf")
+}
+* {
+	box-sizing: border-box;
+	font-family: "Neusa", "Helvetica";
+
+}
+
+
+
+/* --------------------General-------------------- */
+html {
+	height: 100% !important;
+	box-sizing: border-box!important;
+}
+
 body {
 	padding-top: 0 !important;
+	position: absolute !important;
+	margin: 0 !important;
+	min-height: 100% !important;
+	min-width: 100% !important;
 }
 
 @media (min-width: 992px) {
 	body {
 		padding-top: 56px;
+		min-height: 100% !important;
 	}
 }
 
@@ -17,10 +46,10 @@ h2{
 	padding-bottom:0.5em !important;
 }
 
-/* Logo */
+/* --------------------Logo-------------------- */
 .logo{
 	height: 3em;
-	width: 26em;
+	width: 20em;
 	background: url("../img/Logo_blanc_long.png") no-repeat;
 	background-size:contain;
 	display: inline-block;
@@ -30,11 +59,16 @@ h2{
 	background-size:contain;
 }
 
-/* Menu */
+/* --------------------Menu-------------------- */
+.menusmash {
+	font-family: 'Neusa', 'Helvetica';
+}
+
 .navbar {
-	background-color:#000c !important;
+	background-color:rgba(1, 1, 1, 0.8) !important;
 }
 .nav-link{
+	font-size:1.2rem !important;
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -53,26 +87,96 @@ h2{
 .navspace{
 	padding-top:100px;
 }
-.navbar-nav {
-	clear: none;
-}
-.navbar-nav > li > .dropdown-menu {
-	background-color: #000c;
-}
-.navbar-nav > li > .dropdown-menu > .dropdown-item {
-	color: #989898;
-}
-.navbar-nav > li > .dropdown-menu > .dropdown-item:hover {
+
+/* --------------------RANKING-------------------- */
+
+.navrank-link{
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	color: #ffffff !important;
-	background-color: #000c;
+	color:#989898 !important;
+}
+.navrank-link:hover{
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: #000000 !important;
+}
+
+.navrank-link {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+.navrank-link:hover, .nav-link:focus {
+	text-decoration: none;
+}
+
+.navrank-link.disabled {
+	color: #6c757d;
+}
+
+.navrank-tabs {
+	border-bottom: 1px solid #dee2e6;
+}
+
+.navrank-tabs .navrank-item {
+	margin-bottom: -1px;
+}
+
+.navrank-tabs .navrank-link {
+	border: 1px solid transparent;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+.navrank-tabs .navrank-link:hover, .navrank-tabs .navrank-link:focus {
+	border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.navrank-tabs .navrank-link.disabled {
+	color: #6c757d;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navrank-tabs .navrank-link.active,
+.navrank-tabs .navrank-item.show .navrank-link {
+	color: #495057;
+	background-color: #fff;
+	border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.navrank-tabs .dropdown-menu {
+	margin-top: -1px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.navrank-pills .navrank-link {
+	border-radius: 0.25rem;
+}
+
+.navrank-pills .navrank-link.active,
+.navrank-pills .show > .navrank-link {
+	color: #fff;
+	background-color: #007bff;
+}
+
+.navrank-fill .navrank-item {
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	text-align: center;
 }
 
 
+
+
+/* --------------------Images-------------------- */
 
 #banner {
 	background-image: url("../img/background.jpg") !important;
@@ -100,13 +204,23 @@ h2{
 	margin-bottom: 30px;
 }
 
+
+.powerrankings {
+	width: 100%;
+	border-top-left-radius: calc(0.25rem - 1px);
+	border-top-right-radius: calc(0.25rem - 1px);
+}
+
 .singe{
 	padding-top:1em;
 }
 
-
-/* Footer */
+/* --------------------Footer-------------------- */
 #footer {
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
 	background: #202222;
 	color: #888;
 	padding: 0.5em 0em 0.5em;
@@ -142,4 +256,11 @@ h2{
 	border-left: 0;
 	margin-left: 0;
 	padding-left: 0;
+}
+
+/* ---------------------Tweeter------------------------- */
+
+.scrollable {
+	height: 900px;
+	overflow-y: scroll;
 }

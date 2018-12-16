@@ -7,7 +7,7 @@
 <!-- Team Members -->
 <h2>{{ trans("contact.title") }}</h2>
 
-<div class="row">
+<div class="row mb-5">
 	<div class="col-lg-4 mb-4">
 		<div class="card h-100 text-center">
 			<img class="card-img-top" src="{{ asset("img/team/telu.jpg") }}" alt="Telu">

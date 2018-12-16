@@ -34,6 +34,9 @@
 	<!-- Flags -->
 	<link rel="stylesheet" href="{{ asset("css/flags/flags.min.css") }}">
 
+	<!-- Lightbox -->
+	<link rel="stylesheet" href="{{ asset("css/lightbox.css") }}">
+
 	<!-- View specific css -->
 	@yield('styles')
 
@@ -170,6 +173,7 @@
 				<a href="http://twitter.com/VolyaSSB">Volya</a>
 			</li>
 		</div>
+	</div>
 </footer>
 
 <!-- Scripts -->
