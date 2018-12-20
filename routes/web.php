@@ -14,8 +14,11 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/planning', 'PlanningController@index')->name('planning');
 Route::get('/VODs', 'VODController@index')->name('VOD');
-Route::get('/ranking', 'RankingController@index')->name('ranking');
-Route::get('/worldmap', 'WorldmapController@index')->name('worldmap');
-Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('ranking', 'RankingController@index')->name('ranking');
+Route::group(['prefix' => 'communities', 'as' => 'communities.'], function () {
+	Route::get('worldmap', 'CommunityController@worldmap')->name('map');
+	Route::get('contact', 'CommunityController@contact')->name('contact');
+});
 
+Route::get('/team', 'ContactController@index')->name('team');
 Route::get("/lang/{lang}", "HomeController@language");

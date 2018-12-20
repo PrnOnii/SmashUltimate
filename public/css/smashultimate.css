@@ -15,7 +15,7 @@
 }
 * {
 	box-sizing: border-box;
-	font-family: "Neusa", "Helvetica";
+	font-family: "Helvetica";
 
 }
 
@@ -60,7 +60,7 @@ h2{
 }
 
 /* --------------------Menu-------------------- */
-.menusmash {
+.menuSmash li a {
 	font-family: 'Neusa', 'Helvetica';
 }
 
@@ -68,7 +68,7 @@ h2{
 	background-color:rgba(1, 1, 1, 0.8) !important;
 }
 .nav-link{
-	font-size:1.2rem !important;
+	font-size:1.15rem !important;
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -84,8 +84,21 @@ h2{
 	transition: all 0.2s ease-in-out;
 	color: #ffffff !important;
 }
-.navspace{
+.navspace {
 	padding-top:100px;
+}
+
+.navbar-nav li .dropdown-menu {
+	background-color: rgba(1, 1, 1, 0.8);
+}
+
+.navbar-nav li .dropdown-menu .dropdown-item {
+	color: #989898;
+}
+
+.navbar-nav li .dropdown-menu .dropdown-item:hover {
+	color: #ffffff;
+	background-color: #000c;
 }
 
 /* --------------------RANKING-------------------- */

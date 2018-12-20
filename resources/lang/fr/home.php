@@ -9,5 +9,5 @@ return [
 	"calendar"			=> "Planning rapide",
 	"twitter"			=> "Twitter",
 	"twitch"			=> "Twitch live",
-	"construction"		=> "Site en construction!"
+	"construction"		=> "Section en construction!"
 ];

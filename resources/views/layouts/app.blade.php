@@ -23,7 +23,7 @@
 	<link href="{{ asset('css/smashultimate.css') }}" rel="stylesheet">
 
 	<!-- Datatables -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/sl-1.2.6/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
 
 	<!-- Fontawesome 5 -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -59,60 +59,83 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto menuSmash">
 				<li class="nav-item {{ Request::is('/') ? 'active' : ''}}">
 					<a class="nav-link" href="{{ route('home') }}">
-						<i class="fas fa-home"></i> {{ trans('layout.navbar.home') }}
+						{{ mb_strtoupper(trans('layout.navbar.home'), 'UTF-8') }}
 					</a>
 				</li>
+
 				<li class="nav-item {{ Request::is('planning') ? 'active' : ''}}">
 					<a class="nav-link" href="{{ route('planning') }}">
-						<i class="fas fa-calendar-alt"></i> {{ trans('layout.navbar.calendar') }}
+						{{ mb_strtoupper(trans('layout.navbar.calendar'), 'UTF-8') }}
 					</a>
 				</li>
-				<li class="nav-item {{ Request::is('VODs') ? 'active' : ''}}">
-					<a class="nav-link" href="{{ route('VOD') }}">
-						<i class="fas fa-video"></i> {{ trans('layout.navbar.vod') }}
-					</a>
-				</li>
+
 				<li class="nav-item {{ Request::is('ranking') ? 'active' : ''}}">
 					<a class="nav-link" href="{{ route('ranking') }}">
-						<i class="fas fa-trophy"></i> {{ trans('layout.navbar.ranking') }}
+						{{ mb_strtoupper(trans('layout.navbar.ranking'), 'UTF-8') }}
 					</a>
 				</li>
-				<li class="nav-item {{ Request::is('worldmap') ? 'active' : ''}}">
-					<a class="nav-link" href="{{ route('worldmap') }}">
-						<i class="fas fa-globe"></i> {{ trans('layout.navbar.map') }}
-					</a>
-				</li>
-				<li class="nav-item {{ Request::is('contact') ? 'active' : ''}}">
-					<a class="nav-link" href="{{ route('contact') }}">
-						<i class="far fa-user"></i> {{ trans('layout.navbar.contact') }}
-					</a>
-				</li>
-				<li class="nav-item dropdown">
+
+				<!-- COMMUNITY DROPDOWN -->
+				<li class="nav-item dropdown {{ Request::is('community') ? 'active' : ''}}">
 					<a class="nav-link dropdown-toggle"
 					   href="#"
-					   id="navbarDropdown"
+					   id="communityDropdown"
 					   role="button"
 					   data-toggle="dropdown"
 					   aria-haspopup="true"
 					   aria-expanded="false"
 					>
-						{{ Session::get("locale", config('app.locale')) }}
+						{{ mb_strtoupper(trans('layout.navbar.community'), 'UTF-8') }}
 					</a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+					<div class="dropdown-menu" aria-labelledby="communityDropdown">
+						<a class="dropdown-item" href="{{ route('communities.map') }}">
+							{{ mb_strtoupper(trans('layout.navbar.map'), 'UTF-8') }}
+						</a>
+						<a class="dropdown-item" href="{{ route('communities.contact') }}">
+							{{ mb_strtoupper(trans('layout.navbar.contact'), 'UTF-8') }}
+						</a>
+					</div>
+				</li>
+
+				<li class="nav-item {{ Request::is('VODs') ? 'active' : ''}}">
+					<a class="nav-link" href="{{ route('VOD') }}">
+						{{ mb_strtoupper(trans('layout.navbar.vod'), 'UTF-8') }}
+					</a>
+				</li>
+
+				<li class="nav-item {{ Request::is('contact') ? 'active' : ''}}">
+					<a class="nav-link" href="{{ route('team') }}">
+						{{ mb_strtoupper(trans('layout.navbar.about'), 'UTF-8') }}
+					</a>
+				</li>
+
+				<!-- LANG DROPDOWN -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle"
+					   href="#"
+					   id="langDropdown"
+					   role="button"
+					   data-toggle="dropdown"
+					   aria-haspopup="true"
+					   aria-expanded="false"
+					>
+						{{ strtoupper(Session::get("locale", config('app.locale'))) }}
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
 						@foreach(config("app.locales") as $locale)
 							<a class="dropdown-item" href="{{ action("HomeController@language", ["lang" => $locale]) }}">
-								<img src="{{ asset("/img/blank.gif") }}" class="flag flag-{{ $locale }}"> {{ $locale }}
+								<img src="{{ asset("/img/blank.gif") }}" class="flag flag-{{ $locale }}"> {{ strtoupper($locale) }}
 							</a>
 						@endforeach
-									</div>
-								</li>
-							</ul>
-						</div>
 					</div>
-				</nav>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 
 				<!-- ====== BANNER ====== -->
@@ -182,7 +205,7 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src
 ="https://unpkg.com/sweetalert2@7.24.1/dist/sweetalert2.all.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/sl-1.2.6/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 <script src="{{ asset('js/moment.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script>
@@ -191,6 +214,7 @@
 <script src='{{ asset("fullcalendar/fullcalendar.js") }}'></script>
 <script src="{{ asset('fullcalendar/gcal.js') }}"></script>
 <script src="{{ asset('fullcalendar/locale-all.js') }}"></script>
+<script src="{{ asset('js/lightbox.js') }}"></script>
 @yield('scripts')
 </body>
 </html>

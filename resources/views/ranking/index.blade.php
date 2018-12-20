@@ -5,13 +5,25 @@
 @endsection
 
 @section("content")
-	<div class="container navspace">
+	<div class="container">
 		<h2>> {{ trans("ranking.description") }}</h2>
 		<h5>• {{ trans("ranking.wiiU") }}</h5>
 
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 			<li class="nav-item">
 				<a class="navrank-link active"
+				   id="december2018-tab"
+				   data-toggle="tab"
+				   href="#december2018"
+				   role="tab"
+				   aria-controls="december2018"
+				   aria-selected="true"
+				>
+					{{ trans("ranking.months.december") }} 2018
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="navrank-link"
 				   id="may2018-tab"
 				   data-toggle="tab"
 				   href="#may2018"
@@ -97,9 +109,15 @@
 		</ul>
 
 
-		<div class="tab-content" id="myTabContent">
+		<div class="tab-content mb-5" id="myTabContent">
 
-			<div class="tab-pane fade show active" id="may2018" role="tabpanel" aria-labelledby="may2018-tab">
+			<div class="tab-pane fade show active" id="december2018" role="tabpanel" aria-labelledby="december2018-tab">
+				<a href="{{ asset("img/rankings/2018decembre.jpg") }}" data-lightbox="image-1" data-title="december 2018">
+					<img class="powerrankings data-lightbox" src="{{ asset("img/rankings/2018decembre.jpg") }}">
+				</a>
+			</div>
+
+			<div class="tab-pane fade show" id="may2018" role="tabpanel" aria-labelledby="may2018-tab">
 				<a href="{{ asset("img/rankings/2018mai.jpg") }}" data-lightbox="image-1" data-title="may 2018">
 					<img class="powerrankings data-lightbox" src="{{ asset("img/rankings/2018mai169.jpg") }}">
 				</a>

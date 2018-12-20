@@ -23,7 +23,11 @@ class HomeController extends Controller
 			->buildOauth($url, $requestMethod)
 			->performRequest();
 		$tweets = \GuzzleHttp\json_decode($response);
-		foreach ($tweets as $tweet) {
+		foreach ($tweets as $key => $tweet) {
+			if ($tweet->in_reply_to_status_id) {
+				unset($tweets[$key]);
+				continue;
+			}
 			$timestamp = \DateTime::createFromFormat('D M d H:i:s O Y', $tweet->created_at);
 			$tweet->created_at = date('d F Y', $timestamp->getTimestamp());
 

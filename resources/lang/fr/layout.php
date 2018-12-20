@@ -9,10 +9,12 @@ return [
 	"navbar" => [
 		"home"				=> "Accueil",
 		"calendar"			=> "Planning",
-		"vod"				=> "VODs",
 		"ranking"			=> "Classement",
+		"community"			=> "Communautés",
 		"map"				=> "Mappemonde",
-		"contact"			=> "Contacts"
+		"contact"			=> "Contacts",
+		"vod"				=> "VODs",
+		"about"				=> "À propos",
 	],
 
 	"footer" => [
