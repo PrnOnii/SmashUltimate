@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 
 class CommunityController extends Controller
@@ -12,164 +13,273 @@ class CommunityController extends Controller
 
 	public function contact(Request $request) {
 		// Bon la DB me saoule, je le fais a la main et je setuperais ca demain
-		$communities = [
+		$bonsoir = [
 			[
 				"name" => "Global online",
-				"region" => "Online",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/CzsRN83",
+				"discordName" => "4EVO|Le Pugilat Des Étoiles",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
-				"name" => "Global tounrois",
-				"region" => "Online",
+				"name" => "Global tournois",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/FxW8KZa",
+				"discordName" => "Smash Series (tournois)",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Global offline/Paris",
-				"region" => "Paris",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/uqmpRnX",
+				"discordName" => "Groupe Smash Ultimate de l'ombre",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Bordeaux",
-				"region" => "Bordeaux",
 				"twitter" => "https://twitter.com/Asso_TCT",
+				"twitterName" => "Tagazoo Club Talence",
 				"discord" => "https://discord.gg/G6Fwd5B",
+				"discordName" => "TCT Crew",
 				"facebook" => "https://www.facebook.com/club.tct/",
-				"other" => ""
+				"facebookName" => "TCT Tagazoo Club de Talence",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Caen",
-				"region" => "Caen",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/gsnfCVw",
+				"discordName" => "Smash Normandie",
 				"facebook" => "https://www.facebook.com/NorGeekOfficiel/",
-				"other" => ""
+				"facebookName" => "NorGeek / Gaming & Esport",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Haute Savoie",
-				"region" => "Haute Savoie",
 				"twitter" => "https://twitter.com/SuperSmashYaute",
+				"twitterName" => "SuperSmashYaute",
 				"discord" => "https://discord.gg/8xbbaPD",
+				"discordName" => "Super Smash Yaute",
 				"facebook" => "https://www.facebook.com/supersmashyaute/",
-				"other" => ""
+				"facebookName" => "Super Smash Yaute",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
+			],
+			[
+				"name" => "La Reunion",
+				"twitter" => "",
+				"twitterName" => "",
+				"discord" => "https://discord.gg/zFpuBCn",
+				"discordName" => "Super Smash Bros Ultimate 974",
+				"facebook" => "",
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Lille",
-				"region" => "",
 				"twitter" => "https://twitter.com/Salty_Arena",
+				"twitterName" => "Salty Arena",
 				"discord" => "",
+				"discordName" => "",
 				"facebook" => "https://www.facebook.com/groups/1487933521523024/",
-				"other" => ""
+				"facebookName" => "Smash Lille",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Limoges",
-				"region" => "Limoges",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/RFKUJyW",
+				"discordName" => "Smash @ Limoges",
 				"facebook" => "https://www.facebook.com/NewjabesTeam/",
-				"other" => ""
+				"facebookName" => "Newjabes Team",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Lorraine",
-				"region" => "Lorraine",
 				"twitter" => "https://twitter.com/SmashLorraine",
+				"twitterName" => "SmashLorraine",
 				"discord" => "https://discord.gg/C9hjHpB",
+				"discordName" => "SmashLorraine",
 				"facebook" => "https://www.facebook.com/smashlorraine/",
-				"other" => ""
+				"facebookName" => "Smash Lorraine",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Metz",
-				"region" => "Metz",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/UbUZkpq",
+				"discordName" => "Smash @ Lyon !",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Marseille",
-				"region" => "Marseille",
 				"twitter" => "https://twitter.com/ShieldBreakSud",
+				"twitterName" => "ShieldBreak",
 				"discord" => "https://discord.gg/GFY8JTN",
+				"discordName" => "Smash On Sud",
 				"facebook" => "https://www.facebook.com/ShieldBreaksud/",
-				"other" => ""
+				"facebookName" => "Shieldbreak",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Montpellier",
-				"region" => "Montpellier",
 				"twitter" => "https://twitter.com/HitWaveMTPL",
+				"twitterName" => "HitWave",
 				"discord" => "https://discord.gg/22bc3nz",
+				"discordName" => "HitWave Montpellier",
 				"facebook" => "https://www.facebook.com/HitWaveMontpellier/",
-				"other" => "https://twitter.com/SmashALez?s=09",
-				"otherSource" => trans("contact.tbody.twitter")
+				"facebookName" => "HitWave",
+				"other" => "https://twitter.com/SmashALez",
+				"otherType" => "fab fa-twitter",
+				"otherName" => "Smash À Lez"
 			],
 			[
 				"name" => "Nantes",
-				"region" => "Nantes",
 				"twitter" => "https://twitter.com/Beatby44",
+				"twitterName" => "Beat by 44",
 				"discord" => "https://discord.gg/6NnjQcp",
+				"discordName" => "SmUsh Nantes",
 				"facebook" => "https://www.facebook.com/groups/872203626207063/",
-				"other" => "https://www.facebook.com/groups/872203626207063/",
-				"otherSource" => trans("contact.tbody.facebook")
+				"facebookName" => "Sm44sh West",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Nice",
-				"region" => "Nice",
 				"twitter" => "https://twitter.com/SAC_Smash",
+				"twitterName" => "Smash Azur Community",
 				"discord" => "https://discord.gg/etcsUb7",
+				"discordName" => "Smash Azur Community",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
+			],
+			[
+				"name" => "Niort",
+				"twitter" => "",
+				"twitterName" => "",
+				"discord" => "https://discord.gg/gpDVZcx",
+				"discordName" => "Canapé Fight",
+				"facebook" => "",
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Pau",
-				"region" => "Pau",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/bZbEWXN",
+				"discordName" => "Pau smash gamers",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Reims",
-				"region" => "Reims",
 				"twitter" => "",
+				"twitterName" => "",
 				"discord" => "https://discord.gg/8MFpWzf",
+				"discordName" => "-Smash Bros Reims-",
 				"facebook" => "https://www.facebook.com/Smash-Bros-Reims-262994394316980/",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
+			],
+			[
+				"name" => "Rennes",
+				"twitter" => "",
+				"twitterName" => "",
+				"discord" => "https://discord.gg/ZWp9tW9",
+				"discordName" => "Super Smash Breizh",
+				"facebook" => "",
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Rouen",
-				"region" => "Rouen",
 				"twitter" => "https://twitter.com/AssoDoubleKO",
+				"twitterName" => "Double KO",
 				"discord" => "https://discord.gg/WWF5SVj",
+				"discordName" => "Double KO",
 				"facebook" => "https://www.facebook.com/DoubleKoAsso/",
+				"facebookName" => "Double KO Asso'",
 				"other" => "http://doubleko.fr/",
-				"otherSource" => trans("contact.tbody.website")
+				"otherType" => "fas fa-globe",
+				"otherName" => "Double KO"
 			],
 			[
 				"name" => "Strasbourg",
-				"region" => "Strasbourg",
 				"twitter" => "https://twitter.com/SmashBrosStras?s=09",
+				"twitterName" => "Smash Bros. Strasbourg",
 				"discord" => "https://discord.gg/Z2BEQsT",
+				"discordName" => "Smash Strasbourg",
 				"facebook" => "",
-				"other" => ""
+				"facebookName" => "",
+				"other" => "",
+				"otherName" => "",
+				"otherType" => ""
 			],
 			[
 				"name" => "Toulouse",
-				"region" => "Toulouse",
 				"twitter" => "https://twitter.com/PinkCitySmash",
+				"twitterName" => "Pink City Smash",
 				"discord" => "https://discord.gg/2Ez6AaC",
+				"discordName" => "EVERYONE IS HERE!",
 				"facebook" => "https://www.facebook.com/PinkCitySmash/",
+				"facebookName" => "Pink City Smash",
 				"other" => "https://twitter.com/MeltdownTLSE",
-				"otherSource" => trans("contact.tbody.twitter")
+				"otherType" => "fab fa-twitter",
+				"otherName" => "Meltdown Toulouse"
 			]
-		] ;
+		];
+		$communities = Contact::all();
 		return view('community.contact', [
 			"communities" => $communities
 		]);

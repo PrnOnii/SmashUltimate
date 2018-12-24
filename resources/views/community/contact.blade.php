@@ -24,7 +24,7 @@
 							<th>{{ $community["name"] }}</th>
 							<td>
 							@if($community["twitter"])
-								<a href="{{ $community["twitter"] }}">{{ trans("contact.tbody.twitter") }}</a>
+								<a href="{{ $community["twitter"]["url"] }}" target="_blank">{{ $community["twitter"]["name"] }}</a>
 							@else
 								&mdash;
 							@endif
@@ -32,7 +32,7 @@
 
 							<td>
 							@if($community["discord"])
-								<a href="{{ $community["discord"] }}">{{ trans("contact.tbody.discord") }}</a>
+								<a href="{{ $community["discord"]["url"] }}" target="_blank">{{ $community["discord"]["name"] }}</a>
 							@else
 								&mdash;
 							@endif
@@ -40,15 +40,15 @@
 
 							<td>
 							@if($community["facebook"])
-								<a href="{{ $community["facebook"] }}">{{ trans("contact.tbody.facebook") }}</a>
+								<a href="{{ $community["facebook"]["url"] }}" target="_blank">{{ $community["facebook"]["name"] }}</a>
 							@else
 								&mdash;
 							@endif
 							</td>
 
 							<td>
-							@if($community["other"] !== "")
-								<a href="{{ $community["other"] }}">{{ $community["otherSource"] }}</a>
+							@if($community["other"])
+								<a href="{{ $community["other"]["url"] }}" target="_blank"><i class="{{ $community["other"]["type"] }}"></i> {{ $community["other"]["name"] }}</a>
 							@else
 								&mdash;
 							@endif
