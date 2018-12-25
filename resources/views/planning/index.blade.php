@@ -8,7 +8,7 @@
 @endsection
 
 @section("content")
-<div id="calendar"></div>
+<div id="calendar" class="mb-5"></div>
 @endsection
 
 @section('scripts')
