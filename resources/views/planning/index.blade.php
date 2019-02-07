@@ -43,7 +43,7 @@
 						placement: 'top',
 						container: 'body',
 						trigger: 'focus',
-						content: decodeHtmlSpecialCHars(event.description) + '<br>' + '<i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> ' + ((event.location !== undefined) ? event.location : ''),
+						content: ((event.location !== undefined) ? '<i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> ' + event.location + '<br>' : '') + decodeHtmlSpecialCHars(event.description),
 					}).popover('show');
 				}
 				return false;
