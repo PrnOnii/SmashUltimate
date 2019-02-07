@@ -2,7 +2,7 @@
 
 return [
 	"title"				=> "Contacts",
-	"header"			=> "List des contacts",
+	"header"			=> "Liste des contacts",
 	"thead" => [
 		"region"		=> "Région",
 		"twitter"		=> "Twitter",

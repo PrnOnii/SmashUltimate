@@ -1,6 +1,7 @@
 <?php
 
 return [
+	"page-title"			=> "A propos",
 	"title"				=> "L'équipe",
 	"role" => [
 		"bastien"		=> "Instigateur du projet SmashUltimate.fr",

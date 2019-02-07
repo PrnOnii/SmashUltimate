@@ -19,42 +19,42 @@
 					</tr>
 				</thead>
 				<tbody>
-					@foreach($communities as $community)
-						<tr>
-							<th>{{ $community["name"] }}</th>
-							<td>
-							@if($community["twitter"])
-								<a href="{{ $community->twitter["url"] }}" target="_blank">{{ $community->twitter["name"] }}</a>
-							@else
-								&mdash;
-							@endif
-							</td>
+				@foreach($communities as $community)
+					<tr>
+						<th>{{ $community["name"] }}</th>
+						<td>
+						@if($community["twitter"])
+							<a href="{{ $community->twitter["url"] }}" target="_blank">{{ $community->twitter["name"] }}</a>
+						@else
+							&mdash;
+						@endif
+						</td>
 
-							<td>
-							@if($community["discord"])
-								<a href="{{ $community->discord["url"] }}" target="_blank">{{ $community->discord["name"] }}</a>
-							@else
-								&mdash;
-							@endif
-							</td>
+						<td>
+						@if($community["discord"])
+							<a href="{{ $community->discord["url"] }}" target="_blank">{{ $community->discord["name"] }}</a>
+						@else
+							&mdash;
+						@endif
+						</td>
 
-							<td>
-							@if($community["facebook"])
-								<a href="{{ $community->facebook["url"] }}" target="_blank">{{ $community->facebook["name"] }}</a>
-							@else
-								&mdash;
-							@endif
-							</td>
+						<td>
+						@if($community["facebook"])
+							<a href="{{ $community->facebook["url"] }}" target="_blank">{{ $community->facebook["name"] }}</a>
+						@else
+							&mdash;
+						@endif
+						</td>
 
-							<td>
-							@if($community["other"])
-								<a href="{{ $community->other["url"] }}" target="_blank"><i class="{{ $community->other["type"] }}"></i> {{ $community->other["name"] }}</a>
-							@else
-								&mdash;
-							@endif
-							</td>
-						</tr>
-					@endforeach
+						<td>
+						@if($community["other"])
+							<a href="{{ $community->other["url"] }}" target="_blank"><i class="{{ $community->other["type"] }}"></i> {{ $community->other["name"] }}</a>
+						@else
+							&mdash;
+						@endif
+						</td>
+					</tr>
+				@endforeach
 				</tbody>
 			</table>
 		</div>
@@ -72,7 +72,7 @@
 					className: 'dt-head-center'
 				}
 			]
-	} );
+		} );
 	} );
 </script>
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section("content")
-	<div class="container">
+	<div class="container mb-5">
 		<h2>> {{ trans("ranking.description") }}</h2>
 
 		<ul class="nav nav-tabs" id="gameTab" role="tablist">

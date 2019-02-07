@@ -8,6 +8,12 @@
 	<meta name="description" content="{{ trans('layout.meta.description') }}" />
 	<meta name="author" content="Onii =D, Volya">
 	<meta name="keywords" content="" />
+	<meta property="og:title" content="Smash Ultimate FR" />
+	<meta property="og:description" content="{{ trans('layout.meta.description') }}" />
+	<meta property="og:image" content="{{ asset("img/logocouleur.png") }}">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="506">
+	<meta property="og:image:height" content="314">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>@yield('title') | {{ config('app.name', 'Smash Ultimate FR') }}</title>
@@ -138,7 +144,7 @@
 </nav>
 
 
-				<!-- ====== BANNER ====== -->
+<!-- ====== BANNER ====== -->
 @if(Request::is('/'))
 <section id="banner">
 	<h2>{{ trans("home.banner.title") }}</h2>
@@ -176,10 +182,10 @@
 @endif
 <!-- ====== MAIN CONTENT ====== -->
 <div class="container
-						@if(!Request::is('/'))
-							navspace
-						@endif
-						">
+@if(!Request::is('/'))
+	navspace
+@endif
+	">
 	@yield('content')
 </div>
 
@@ -203,8 +209,7 @@
 <script src="{{ asset('js/jquery-3.3.1.slim.min.js') }}"></script>
 <script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src
-="https://unpkg.com/sweetalert2@7.24.1/dist/sweetalert2.all.js"></script>
+<script src="https://unpkg.com/sweetalert2@7.24.1/dist/sweetalert2.all.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 <script src="{{ asset('js/moment.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>

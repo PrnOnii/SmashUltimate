@@ -8,7 +8,7 @@
 @endsection
 
 @section("content")
-<div id="calendar" class="mb-5"></div>
+	<div id="calendar" class="mb-5"></div>
 @endsection
 
 @section('scripts')
@@ -43,7 +43,7 @@
 						placement: 'top',
 						container: 'body',
 						trigger: 'focus',
-						content: decodeHtmlSpecialCHars(event.description),
+						content: decodeHtmlSpecialCHars(event.description) + '<br>' + '<i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> ' + ((event.location !== undefined) ? event.location : ''),
 					}).popover('show');
 				}
 				return false;

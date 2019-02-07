@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section('title')
-	Contacts
+	{{ trans("about.page-title") }}
 @endsection
 @section("content")
 <!-- Team Members -->
